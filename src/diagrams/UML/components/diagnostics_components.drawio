@@ -1,0 +1,229 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.1">
+  <diagram name="Компонентов А0" id="bFQXx9zOs4aZUoRtiiqD">
+    <mxGraphModel dx="727" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="G5BQr4BdwtAGsGS-C_WX-0" />
+        <mxCell id="G5BQr4BdwtAGsGS-C_WX-1" parent="G5BQr4BdwtAGsGS-C_WX-0" />
+        <mxCell id="G5BQr4BdwtAGsGS-C_WX-2" parent="G5BQr4BdwtAGsGS-C_WX-1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" value="Проведение диагностики неисправности" vertex="1">
+          <mxGeometry height="40" width="300" x="957" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-0" parent="G5BQr4BdwtAGsGS-C_WX-1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1" value="Диаграмма компонентов системы диагностики неисправностей" vertex="1">
+          <mxGeometry height="30" width="400" x="1300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-1" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;dashed=1;" value="Веб-клиент&#xa;(Пользователь)" vertex="1">
+          <mxGeometry height="60" width="170" x="885" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-2" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;dashed=1;" value="Интерфейс&#xa;оборудования" vertex="1">
+          <mxGeometry height="60" width="165" x="880" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-3" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;align=center;" value="Веб-интерфейс&#xa;диагностики" vertex="1">
+          <mxGeometry height="60" width="160" x="1210" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-4" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="API Gateway&#xa;диагностики" vertex="1">
+          <mxGeometry height="60" width="153" x="1487" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-5" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Сервис&#xa;аутентификации" vertex="1">
+          <mxGeometry height="60" width="160" x="1610" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-6" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Контроллер&#xa;диагностики" vertex="1">
+          <mxGeometry height="60" width="170" x="1770" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-7" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Верификатор&#xa;диагнозов" vertex="1">
+          <mxGeometry height="60" width="153" x="2057" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-8" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Анализатор&#xa;симптомов" vertex="1">
+          <mxGeometry height="60" width="170" x="1260" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-9" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Сервис&#xa;машинного обучения" vertex="1">
+          <mxGeometry height="60" width="190" x="1450" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-10" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Генератор&#xa;гипотез" vertex="1">
+          <mxGeometry height="60" width="147" x="1733" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-11" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Классификатор&#xa;неисправностей" vertex="1">
+          <mxGeometry height="60" width="190" x="1450" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-12" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Анализатор&#xa;зависимостей" vertex="1">
+          <mxGeometry height="60" width="170" x="1260" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-13" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=component;whiteSpace=wrap;html=1;" value="Рекомендательная&#xa;система" vertex="1">
+          <mxGeometry height="60" width="177" x="1733" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-14" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" value="База знаний&#xa;оборудования" vertex="1">
+          <mxGeometry height="80" width="120" x="1287" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-15" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" value="Справочник&#xa;симптомов" vertex="1">
+          <mxGeometry height="80" width="120" x="1487" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-16" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" value="Сервис&#xa;истории случаев" vertex="1">
+          <mxGeometry height="80" width="120" x="1930" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-17" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" value="Сервис&#xa;инструкций по ремонту" vertex="1">
+          <mxGeometry height="80" width="120" x="2070" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-20" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-3" value="ввод симптомов&#xa;получение результатов">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="180" />
+              <mxPoint x="1160" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-21" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-4" value="импорт истории&#xa;ремонтов">
+          <mxGeometry relative="1" x="-0.72" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1417" y="290" />
+              <mxPoint x="1417" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-22" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-4" value="REST API запросы">
+          <mxGeometry relative="1" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1457" y="180" />
+              <mxPoint x="1457" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-23" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-5" value="проверка токена">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1513" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-24" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-6" value="запрос диагностики">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1657" y="180" />
+              <mxPoint x="1657" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-25" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-14" value="запрос спецификаций&#xa;оборудования">
+          <mxGeometry relative="1" x="0.8782" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1817" y="320" />
+              <mxPoint x="1350" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-26" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-15" value="поиск симптомов&#xa;в справочнике">
+          <mxGeometry relative="1" x="0.8249" y="-3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1827" y="340" />
+              <mxPoint x="1550" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-27" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-16" value="поиск похожих&#xa;случаев">
+          <mxGeometry relative="1" x="0.7692" y="30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1870" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-28" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-17" value="получение&#xa;инструкций">
+          <mxGeometry relative="1" x="-0.2766" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1887" y="340" />
+              <mxPoint x="2120" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-29" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-9" value="ML классификация&#xa;симптомов">
+          <mxGeometry relative="1" x="0.0742" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1837" y="370" />
+              <mxPoint x="1707" y="370" />
+              <mxPoint x="1707" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-30" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-8" value="анализ и&#xa;нормализация">
+          <mxGeometry relative="1" x="0.717" y="-7" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1807" y="310" />
+              <mxPoint x="1237" y="310" />
+              <mxPoint x="1237" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-31" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-10" value="генерация&#xa;диагностических гипотез">
+          <mxGeometry relative="1" x="0.6191" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1847" y="500" />
+              <mxPoint x="1790" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-32" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-7" value="верификация&#xa;и подтверждение">
+          <mxGeometry relative="1" x="-0.0667" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2087" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-33" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-7" value="проверка&#xa;инструкций">
+          <mxGeometry relative="1" x="0.2859" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2140" y="240" />
+              <mxPoint x="2140" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-34" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Z_Rhh2BLFBrE9uG55RD6-11" value="классификация&#xa;типов неисправностей">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-35" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-12" value="анализ причинно-&#xa;следственных связей">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-36" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-13" value="рекомендации&#xa;по ремонту">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-37" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-8" value="данные об&#xa;оборудовании">
+          <mxGeometry relative="1" x="-0.3333" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1347" y="550" />
+              <mxPoint x="1347" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-38" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-9" value="исторические данные&#xa;для обучения">
+          <mxGeometry relative="1" x="-0.25" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1547" y="610" />
+              <mxPoint x="1547" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-39" edge="1" parent="G5BQr4BdwtAGsGS-C_WX-1" source="Z_Rhh2BLFBrE9uG55RD6-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="Z_Rhh2BLFBrE9uG55RD6-10" value="похожие случаи&#xa;для анализа">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2010" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-19" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=port;perimeter=rectangle;html=1;" value="" vertex="1">
+          <mxGeometry height="10" width="10" x="1045" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="Z_Rhh2BLFBrE9uG55RD6-18" parent="G5BQr4BdwtAGsGS-C_WX-1" style="shape=port;perimeter=rectangle;html=1;" value="" vertex="1">
+          <mxGeometry height="10" width="10" x="1055" y="175" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

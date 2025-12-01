@@ -1,5 +1,7 @@
-# Summary
+# Оглавление
 
-- [Конфигурация проекта](./md.md)
-- [Пример использования Drawio](./drawio.md)
-- [Пример использования Swagger](./swagger.md)
+- [Техническое задание](./technical_specification.md)
+- [Диаграммы IDEF0](./idef0.md)
+- [Диаграммы IDEF3](./idef3.md)
+- [Диаграммы DFD](./dfd.md)
+- [Диаграммы UML](./uml.md)
