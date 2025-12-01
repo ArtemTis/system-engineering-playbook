@@ -7,6 +7,10 @@
 - [Диаграммы Use-case](./diagrams/use-case.md)
 - [Диаграммы Последовательности](./diagrams/sequence.md)
 
+@drawio{../diagrams-codes/uml/components/diagnostics_components.drawio}
+@drawio{https://raw.githubusercontent.com/ArtemTis/system-engineering-playbook@main/diagrams-codes/uml/components/diagnostics_components.drawio}
+
+<iframe class="drawio-viewer" style="width: 100%; height: 800px; min-height: 600px; border: 1px solid #ddd; border-radius: 4px; margin: 20px 0;" src="https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1&title=diagram&url=https://raw.githubusercontent.com/ArtemTis/system-engineering-playbook/main/diagrams-codes/uml/diagnostics_components.drawio"></iframe>
 
 <iframe style="width: 100%; height: 2000px; min-height: 1500px; border: 1px solid #ddd; border-radius: 4px; margin: 20px 0;" src="./uml/components/diagnostics_components.drawio"></iframe>
 
