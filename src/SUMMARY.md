@@ -1,4 +1,3 @@
-
 # Summary
 
 # [1. Техническое задание](./technical_specification.md)
@@ -21,21 +20,21 @@
 
 ---
 
-# 2. [UML диаграммы]
-    - [2.1. Диаграммы компонентов](./diagrams/components.md)
-    - [2.2. Диаграммы классов](./diagrams/classes.md)
-    - [2.3. Диаграммы активности](./diagrams/activity.md)
-    - [2.4. Диаграммы use-case](./diagrams/use-case.md)
-    - [2.5. Диаграммы последовательности](./diagrams/sequence.md)
+- UML диаграммы
+    - [Диаграммы компонентов](./diagrams/components.md)
+    - [Диаграммы классов](./diagrams/classes.md)
+    - [Диаграммы активности](./diagrams/activity.md)
+    - [Диаграммы use-case](./diagrams/use-case.md)
+    - [Диаграммы последовательности](./diagrams/sequence.md)
 
 ---
 
-- [Диаграммы IDEF0](./idef0.md)
+- [Диаграммы IDEF0](./diagrams/idef0.md)
 
 ---
 
-- [Диаграммы IDEF3](./idef3.md)
+- [Диаграммы IDEF3](./diagrams/idef3.md)
 
 ---
 
-- [Диаграммы DFD](./dfd.md)
+- [Диаграммы DFD](./diagrams/dfd.md)
