@@ -4,7 +4,7 @@
 
 ---
 
-- UML диаграммы
+## UML диаграммы
     - [Диаграммы компонентов](./diagrams/components.md)
     - [Диаграммы классов](./diagrams/classes.md)
     - [Диаграммы активности](./diagrams/activity.md)
