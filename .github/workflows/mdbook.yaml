@@ -19,6 +19,22 @@ jobs:
         with:
           mdbook-version: "0.4.52"
 
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: "_tools/mdbook-drawio -> target"
+
+      - name: Build Drawio Preprocessor
+        run: |
+          cd _tools/mdbook-drawio
+          cargo build --release
+          sudo cp target/release/mdbook-drawio /usr/local/bin/
+
       - name: Build Book
         run: mdbook build
 
