@@ -1,5 +1,5 @@
 
-* [Техническое задание](./technical_specification.md)
+[Техническое задание](./technical_specification.md)
 
 ---
 
@@ -27,12 +27,12 @@
 
 ---
 
-* [3. Диаграммы IDEF0 ](./diagrams/idef0.md)
+[3. Диаграммы IDEF0 ](./diagrams/idef0.md)
 
 ---
 
-* [4. Диаграммы IDEF3 ](./diagrams/idef3.md)
+[4. Диаграммы IDEF3 ](./diagrams/idef3.md)
 
 ---
 
-* [5. Диаграммы DFD ](./diagrams/dfd.md)
+[5. Диаграммы DFD ](./diagrams/dfd.md)
