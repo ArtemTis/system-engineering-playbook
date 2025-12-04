@@ -27,12 +27,12 @@
 
 ---
 
-[3. Диаграммы IDEF0 ](./diagrams/idef0.md)
+[Диаграммы IDEF0 ](./diagrams/idef0.md)
 
 ---
 
-[4. Диаграммы IDEF3 ](./diagrams/idef3.md)
+[Диаграммы IDEF3 ](./diagrams/idef3.md)
 
 ---
 
-[5. Диаграммы DFD ](./diagrams/dfd.md)
+[Диаграммы DFD ](./diagrams/dfd.md)
