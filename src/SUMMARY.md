@@ -39,4 +39,4 @@
 
 ---
 
-[Статья](./diagrams/dfd.md)
+[Статья](./article.md)
