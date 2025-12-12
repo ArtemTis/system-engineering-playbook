@@ -36,3 +36,7 @@
 ---
 
 [Диаграммы DFD ](./diagrams/dfd.md)
+
+---
+
+[Статья](./diagrams/dfd.md)
