@@ -1,0 +1,223 @@
+<mxfile host="Electron" modified="2025-12-25T11:54:06.719Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="8nUeUkSjkjL-_ZxxSGC9" version="24.0.4" type="device">
+  <diagram name="Компонентная схема сервиса ремонта техники" id="7SJ9979zQ4wRPGiCO7Ss">
+    <mxGraphModel dx="1509" dy="888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HrkLbA865yx6RJ55vn3R-1" value="Внешние системы и данные" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="800" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-2" value="Техническая документация" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-1">
+          <mxGeometry x="50" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-3" value="Каталог компонентов" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-1">
+          <mxGeometry x="250" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-4" value="ML-инфраструктура" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-1">
+          <mxGeometry x="450" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-5" value="Сервисные центры" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-1">
+          <mxGeometry x="250" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-6" value="Внешние AI-сервисы" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-1">
+          <mxGeometry x="50" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-7" value="Система поддержки" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-1">
+          <mxGeometry x="450" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-8" value="Пользовательские интерфейсы" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="240" width="800" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-9" value="Веб-интерфейс диагностики" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0288d1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-8">
+          <mxGeometry x="50" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-10" value="Мобильное приложение" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0288d1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-8">
+          <mxGeometry x="310" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-11" value="Административная панель" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0288d1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-8">
+          <mxGeometry x="570" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-12" value="Интерфейс оборудования" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0288d1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-8">
+          <mxGeometry x="180" y="110" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-13" value="Система отчетности" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0288d1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-8">
+          <mxGeometry x="440" y="110" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-14" value="API Шлюз" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="440" width="800" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-15" value="API Gateway" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#7b1fa2;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-14">
+          <mxGeometry x="250" y="40" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-16" value="Сервис аутентификации" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#7b1fa2;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-14">
+          <mxGeometry x="410" y="40" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-17" value="Сервис интеграции" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#7b1fa2;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-14">
+          <mxGeometry x="570" y="40" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-18" value="Бизнес-сервисы: Диагностический блок" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="580" width="800" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-19" value="Контроллер диагностики" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-18">
+          <mxGeometry x="50" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-20" value="Анализатор симптомов" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-18">
+          <mxGeometry x="240" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-21" value="Генератор гипотез" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-18">
+          <mxGeometry x="430" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-22" value="Верификатор диагнозов" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-18">
+          <mxGeometry x="620" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-23" value="Анализатор зависимостей" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-18">
+          <mxGeometry x="140" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-24" value="Система принятия решений" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-18">
+          <mxGeometry x="330" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-25" value="Модуль оценки рисков" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-18">
+          <mxGeometry x="520" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-26" value="Бизнес-сервисы: ML блок" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="840" width="800" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-27" value="Сервис машинного обучения" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-26">
+          <mxGeometry x="100" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-28" value="Классификатор неисправностей" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-26">
+          <mxGeometry x="310" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-29" value="ИИ-помощник диагностики" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-26">
+          <mxGeometry x="520" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-30" value="Рекомендательная система" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ef6c00;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-26">
+          <mxGeometry x="310" y="110" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-31" value="Сервисы данных и инструкций" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1040" width="800" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-32" value="Сервис инструкций по ремонту" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-31">
+          <mxGeometry x="50" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-33" value="Сервис истории случаев" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-31">
+          <mxGeometry x="260" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-34" value="Отчетный модуль" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-31">
+          <mxGeometry x="470" y="40" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-35" value="Экспортер данных" style="shape=component;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-31">
+          <mxGeometry x="260" y="110" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-36" value="Хранилища данных" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1240" width="800" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-37" value="База знаний оборудования" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="50" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-38" value="Справочник симптомов" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="220" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-39" value="База знаний неисправностей" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="390" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-40" value="База пользователей" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="560" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-41" value="Векторная БД" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="135" y="140" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-42" value="Графовая БД знаний" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="285" y="140" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-43" value="Кэш-сервер (Redis)" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="435" y="140" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-44" value="Хранилище медиа" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-36">
+          <mxGeometry x="585" y="140" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-45" value="Инфраструктурные компоненты" style="swimlane;fontStyle=1;fontSize=14;align=center;verticalAlign=top;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1500" width="800" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-46" value="Message Broker" style="shape=component;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#546e7a;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-45">
+          <mxGeometry x="50" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-47" value="ML Serving" style="shape=component;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#546e7a;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-45">
+          <mxGeometry x="240" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-48" value="Мониторинг" style="shape=component;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#546e7a;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-45">
+          <mxGeometry x="430" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-49" value="NLP-обработчик" style="shape=component;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#546e7a;" vertex="1" parent="HrkLbA865yx6RJ55vn3R-45">
+          <mxGeometry x="620" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-9" target="HrkLbA865yx6RJ55vn3R-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="430" />
+              <mxPoint x="340" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-10" target="HrkLbA865yx6RJ55vn3R-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="430" />
+              <mxPoint x="340" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-15" target="HrkLbA865yx6RJ55vn3R-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-19" target="HrkLbA865yx6RJ55vn3R-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-20" target="HrkLbA865yx6RJ55vn3R-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-28" target="HrkLbA865yx6RJ55vn3R-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-19" target="HrkLbA865yx6RJ55vn3R-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-20" target="HrkLbA865yx6RJ55vn3R-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-17" target="HrkLbA865yx6RJ55vn3R-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="50" />
+              <mxPoint x="350" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="HrkLbA865yx6RJ55vn3R-27" target="HrkLbA865yx6RJ55vn3R-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="910" />
+              <mxPoint x="50" y="130" />
+              <mxPoint x="550" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-60" value="Легенда:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1700" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-61" value="Внешние системы" style="shape=component;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1750" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-62" value="Пользовательский интерфейс" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0288d1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="1750" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-63" value="Бизнес-логика" style="shape=component;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2e7d32;" vertex="1" parent="1">
+          <mxGeometry x="420" y="1750" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrkLbA865yx6RJ55vn3R-64" value="Хранилище данных" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="1750" width="140" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

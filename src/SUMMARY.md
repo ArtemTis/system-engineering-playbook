@@ -39,4 +39,12 @@
 
 ---
 
+[Диаграммы BPMN ](./diagrams/bpmn.md)
+
+---
+
+[Компонентная схема ](./diagrams/component.md)
+
+---
+
 [Статья](./article.md)
