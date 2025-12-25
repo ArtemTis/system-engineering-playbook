@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ADR  - system-engineering-playbook</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="src/_assets/custom.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">system-engineering-playbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="architecture-decision-record-Выбор-архитектурных-решений"><a class="header" href="#architecture-decision-record-Выбор-архитектурных-решений">Architecture Decision Record: Выбор архитектурных решений</a></h1>
+<p>1: Принятие микросервисной архитектуры для системы диагностики</p>
+<p>Контекст: Требуется построить сложную систему с независимо масштабируемыми компонентами (ИИ-помощник, диагностика, интеграция с каталогами, сообщество), обеспечивая высокую доступность (≥99%) и обработку до 5000 одновременных сессий. Система должна развиваться итеративно.</p>
+<p>Варианты:</p>
+<ul>
+<li>Монолитное приложение</li>
+<li>Микросервисная архитектура</li>
+<li>Модульный монолит (Modulith)</li>
+</ul>
+<p>Выбор: Микросервисная архитектура</p>
+<p>Обоснование:</p>
+<ul>
+<li>Неравномерная нагрузка: ИИ-сервис и модуль диагностики требуют больше ресурсов, чем статические сервисы</li>
+<li>Независимое развертывание: необходимо часто обновлять модели ИИ и базу знаний без перезапуска всей системы</li>
+<li>Разнородность технологий: ИИ на Python, веб-сервисы на Node.js/Java, что естественно ложится на разные сервисы</li>
+<li>Отказоустойчивость: сбой в одном сервисе не должен приводить к остановке всей системы</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: независимое масштабирование, гибкость выбора технологий для каждого сервиса, легкость замены компонентов</li>
+<li>Отрицательные: сложность оркестрации, распределенные транзакции, повышенные требования к мониторингу и DevOps</li>
+</ul>
+<hr />
+<p>2: Выбор языков и фреймворков для бэкенд-сервисов</p>
+<p>Контекст: Необходимо реализовать разнородные сервисы: высоконагруженные API, ИИ-обработка, асинхронные задачи. Команда имеет опыт с Python и Node.js.</p>
+<p>Варианты:</p>
+<ul>
+<li>Единый стек (например, только Java Spring Boot)</li>
+<li>Специализированные языки под задачи</li>
+<li>Смешанный стек на основе экспертизы команды</li>
+</ul>
+<p>Выбор: Смешанный стек:</p>
+<ul>
+<li>Python (FastAPI): для ИИ-сервисов, ML-пайплайнов, обработки данных</li>
+<li>Node.js (NestJS): для API Gateway, сервисов аутентификации, real-time коммуникаций</li>
+<li>Go: для высоконагруженных сервисов интеграции с каталогами и обработки платежей</li>
+</ul>
+<p>Обоснование:</p>
+<ul>
+<li>Python: лучшая экосистема для ML (TensorFlow, PyTorch, scikit-learn)</li>
+<li>Node.js: асинхронная природа подходит для I/O-bound операций, единый язык с фронтендом</li>
+<li>Go: высокая производительность и низкое потребление памяти для CPU-intensive задач</li>
+<li>Соответствие экспертизе команды снижает риски разработки</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: использование оптимальных инструментов для каждой задачи, высокая производительность</li>
+<li>Отрицательные: необходимость мультиязыковой поддержки в CI/CD, сложность переиспользования кода между сервисами</li>
+</ul>
+<hr />
+<p>3: Выбор фронтенд-стэка для кроссплатформенного приложения</p>
+<p>Контекст: Требуется единая кодовая база для веб-приложения и мобильных приложений (iOS/Android) с адаптивным интерфейсом, работающим на экранах от 320px до 4K.</p>
+<p>Варианты:</p>
+<ul>
+<li>Раздельная разработка: нативный iOS/Swift, нативный Android/Kotlin, веб/React</li>
+<li>Гибридные фреймворки: React Native, Flutter, Ionic</li>
+<li>Прогрессивное веб-приложение (PWA) + Capacitor</li>
+</ul>
+<p>Выбор: React для веба + React Native для мобильных приложений</p>
+<p>Обоснование:</p>
+<ul>
+<li>Единая ментальная модель для разработчиков (React на всех платформах)</li>
+<li>Возможность переиспользования бизнес-логики и компонентов (~70% кода)</li>
+<li>Зрелая экосистема React Native с поддержкой нативных модулей для работы с камерой (для сканирования штрих-кодов)</li>
+<li>TypeScript для типизации и снижения количества runtime-ошибок</li>
+<li>Широкая распространенность на рынке, легко найти разработчиков</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: экономия на разработке и поддержке, единый стейт-менеджмент (Redux Toolkit/MobX), горячая перезагрузка</li>
+<li>Отрицательные: производительность ниже нативной для сложных анимаций, зависимость от моста в React Native, размер бандла</li>
+</ul>
+<hr />
+<p>4: Выбор стэка для ИИ-помощника и NLP-обработки</p>
+<p>Контекст: Требуется ИИ-помощник, понимающий технические термины электроники, с точностью диагностики ≥80% для топ-1000 моделей. Обработка должна быть ≤3 секунд.</p>
+<p>Варианты:</p>
+<ul>
+<li>Использование готовых NLP API (OpenAI GPT, Google Dialogflow)</li>
+<li>Fine-tuning открытых моделей (BERT, GPT-2)</li>
+<li>Обучение собственной модели с нуля</li>
+<li>Гибридный подход: rule-based система + ML</li>
+</ul>
+<p>Выбор: Гибридный подход:</p>
+<ul>
+<li>Fine-tuned BERT-модель для классификации интентов и извлечения сущностей</li>
+<li>Rule-based диалоговый движок для гарантированной работы сценариев безопасности</li>
+<li>Векторные эмбеддинги для поиска похожих случаев</li>
+<li>Внешний LLM API (GPT-4) для обработки edge-cases и генерации объяснений</li>
+</ul>
+<p>Обоснование:</p>
+<ul>
+<li>BERT fine-tuning дает высокую точность на технической лексике при ограниченных данных</li>
+<li>Rule-based компонент гарантирует обязательные предупреждения о безопасности (требование ТБ-006)</li>
+<li>Векторный поиск ускоряет диагностику на основе исторических данных</li>
+<li>GPT-4 как fallback для нестандартных запросов улучшает пользовательский опыт</li>
+<li>Локальные модели обеспечивают отклик ≤3с без зависимости от внешних API</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: баланс точности и контроля, соответствие требованиям безопасности, работа offline-режиме</li>
+<li>Отрицательные: сложность поддержки нескольких моделей, необходимость регулярного переобучения на новых данных</li>
+</ul>
+<hr />
+<p>5: Выбор API Gateway и коммуникационных паттернов</p>
+<p>Контекст: Множество клиентов (веб, мобильные приложения) обращаются к десяткам микросервисов. Необходимы: аутентификация, rate limiting, кэширование, маршрутизация.</p>
+<p>Варианты:</p>
+<ul>
+<li>Собственная реализация на основе nginx + Lua</li>
+<li>Готовые API Gateway: Kong, Tyk, AWS API Gateway</li>
+<li>Service mesh подход: Istio + Envoy</li>
+<li>GraphQL Gateway (Apollo Federation)</li>
+</ul>
+<p>Выбор: Kong в качестве API Gateway + GraphQL Apollo Federation для агрегации данных</p>
+<p>Обоснование:</p>
+<ul>
+<li>Kong: открытый исходный код, плагины для OAuth 2.0, rate limiting, мониторинг, легкая интеграция с Kafka</li>
+<li>Apollo Federation: единый GraphQL endpoint для клиентов, позволяет агрегировать данные из нескольких сервисов за один запрос (например, данные устройства + история ремонтов + доступные компоненты)</li>
+<li>Разделение ответственности: Kong для инфраструктурных задач (безопасность, трафик), Apollo для бизнес-агрегации</li>
+<li>Поддержка как REST (для интеграций), так и GraphQL (для фронтенда)</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: декларативная конфигурация маршрутов, GraphQL уменьшает over-fetching данных, единая точка мониторинга трафика</li>
+<li>Отрицательные: дополнительная точка отказа, необходимость поддержки двух систем, сложность отладки GraphQL запросов</li>
+</ul>
+<hr />
+<p>6: Выбор стратегии аутентификации и авторизации</p>
+<p>Контекст: Необходима многоуровневая система доступа (Гость, Пользователь, Администратор, Эксперт) с поддержкой социальных логинов, двухфакторной аутентификации и соответствием 152-ФЗ.</p>
+<p>Варианты:</p>
+<ul>
+<li>Кастомная реализация JWT + сессии</li>
+<li>Identity Provider (Keycloak, Auth0, Okta)</li>
+<li>OAuth 2.0 / OpenID Connect провайдеры (Google, VK, Yandex)</li>
+<li>Безсерверные решения (AWS Cognito, Firebase Auth)</li>
+</ul>
+<p>Выбор: Keycloak как Identity Provider + JWT для сервисной авторизации</p>
+<p>Обоснование:</p>
+<ul>
+<li>Keycloak: открытый исходный код, поддержка OIDC, SAML, социальных логинов, кастомных атрибутов пользователей</li>
+<li>Гибкая система ролей и политик для сложных сценариев доступа (например, "Эксперт может редактировать БЗ только в своей категории техники")</li>
+<li>Возможность self-hosting, что критично для хранения персональных данных в РФ</li>
+<li>Интеграция с Active Directory для корпоративных сценариев</li>
+<li>JWT уменьшает нагрузку на сервисы аутентификации, так как проверка токена может выполняться на уровне API Gateway</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: единая точка управления пользователями, поддержка множества протоколов, соответствие стандартам безопасности</li>
+<li>Отрицательные: сложность настройки и поддержки Keycloak кластера, кривая обучения для команды</li>
+</ul>
+<hr />
+<p>7: Выбор стратегии хранения и обработки медиаконтента</p>
+<p>Контекст: Система хранит инструкции с фото/видео, схемы устройств, пользовательские фото неисправностей. Требуется обработка (ресайзинг, водяные знаки), CDN-раздача и бэкапы.</p>
+<p>Варианты:</p>
+<ul>
+<li>Хранение в базе данных (BLOB)</li>
+<li>Файловая система сервера</li>
+<li>Объектные хранилища (S3-совместимые)</li>
+<li>Специализированные медиа-сервисы (Cloudinary, imgix)</li>
+</ul>
+<p>Выбор: MinIO (S3-совместимое хранилище) + собственный сервис обработки изображений</p>
+<p>Обоснование:</p>
+<ul>
+<li>MinIO: открытый исходный код, самодостаточность (не зависит от облачных провайдеров), S3 API для простой интеграции</li>
+<li>Собственный сервис обработки: полный контроль над конвейером (например, автоматическое наложение предупреждающих знаков на схемы с высоким напряжением)</li>
+<li>Разделение origin storage и CDN: MinIO как источник истины, CDN (например, Cloudflare) для раздачи</li>
+<li>Поддержка версионирования объектов для отслеживания изменений инструкций</li>
+<li>Экономия на внешних медиа-сервисах при больших объемах</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: полный контроль над данными, предсказуемые расходы, независимость от вендоров</li>
+<li>Отрицательные: необходимость самостоятельно настраивать репликацию, мониторинг и бэкапы хранилища</li>
+</ul>
+<hr />
+<p>8: Выбор инструментов мониторинга, логирования и алертинга</p>
+<p>Контекст: Система состоит из 15+ микросервисов, требует мониторинга доступности ≥99%, сбора метрик производительности, centralized logging и алертинга при нарушениях SLA.</p>
+<p>Варианты:</p>
+<ul>
+<li>Облачные managed-сервисы (Datadog, New Relic)</li>
+<li>Стеки на основе открытого ПО (ELK, TICK, Prometheus+Grafana)</li>
+<li>Гибридный подход</li>
+</ul>
+<p>Выбор: Prometheus + Grafana + Loki + Tempo (Grafana стэк)</p>
+<p>Обоснование:</p>
+<ul>
+<li>Prometheus: pull-модель сбора метрик идеально подходит для Kubernetes, мощный язык запросов PromQL</li>
+<li>Grafana: единая панель для метрик, логов и трассировок, богатая экосистема дашбордов</li>
+<li>Loki: индексирование только метаданных логов, экономичное хранение, интеграция с Grafana</li>
+<li>Tempo: distributed tracing для анализа производительности сквозных сценариев (например, полный путь "диагностика → рекомендация → заказ")</li>
+<li>Открытый исходный код, отсутствие лицензионных ограничений при росте объема данных</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: единый стек для observability, мощные возможности корреляции метрик и логов, активное комьюнити</li>
+<li>Отрицательные: необходимость самостоятельно масштабировать и поддерживать стэк, кривая обучения для сложных запросов</li>
+</ul>
+<hr />
+<p>9: Выбор CI/CD и стратегии развертывания</p>
+<p>Контекст: Команда из 10+ разработчиков работает над 15+ микросервисами. Необходимы автоматические тесты, контейнеризация, деплой в staging/production с минимальным downtime.</p>
+<p>Варианты:</p>
+<ul>
+<li>Самописные скрипты на базе Jenkins</li>
+<li>GitLab CI/CD</li>
+<li>GitHub Actions</li>
+<li>CircleCI + ArgoCD</li>
+</ul>
+<p>Выбор: GitHub Actions + ArgoCD + Kubernetes</p>
+<p>Обоснование:</p>
+<ul>
+<li>GitHub Actions: тесная интеграция с GitHub (основной VCS), marketplace действий, бесплатные минуты для open source</li>
+<li>ArgoCD: GitOps подход — состояние кластера описывается в Git, автоматические деплои при изменениях</li>
+<li>Kubernetes: оркестрация контейнеров, автоскейлинг, self-healing, namespaces для изоляции сред</li>
+<li>Canary-деплой через Argo Rollouts для постепенного вкатывания изменений в ИИ-моделях</li>
+<li>Мульти-кластерная архитектура для географического распределения (ЕС и РФ для соблюдения 152-ФЗ)</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: декларативная инфраструктура, автоматические rollback при сбоях, легкое масштабирование</li>
+<li>Отрицательные: высокая сложность Kubernetes, необходимость глубоких знаний для troubleshooting, зависимость от стабильности Git-репозитория</li>
+</ul>
+<hr />
+<p>10: Выбор стратегии тестирования и обеспечения качества</p>
+<p>Контекст: Критически важна точность ИИ-диагностики (≥80%), безопасность финансовых операций, удобство интерфейса (SUS ≥75). Необходимо тестирование на всех уровнях.</p>
+<p>Варианты:</p>
+<ul>
+<li>Ручное тестирование</li>
+<li>Автоматизированное тестирование с фокусом на unit-тесты</li>
+<li>Сквозное (E2E) тестирование всех пользовательских сценариев</li>
+<li>Комбинация подходов</li>
+</ul>
+<p>Выбор: Комплексная стратегия Testing Pyramid + Chaos Engineering</p>
+<p>Обоснование:</p>
+<ul>
+<li>Unit-тесты (60%): Jest для фронтенда, pytest для Python-сервисов, высокое покрытие бизнес-логики</li>
+<li>Интеграционные тесты (25%): тестирование взаимодействия между сервисами, работа с реальными БД в тестовом контуре</li>
+<li>E2E тесты (15%): Cypress для веба, Detox для мобильных приложений, проверка критичных пользовательских путей</li>
+<li>Нагрузочное тестирование: k6 для проверки требования 5000 одновременных сессий</li>
+<li>Chaos Engineering: Chaos Mesh для тестирования устойчивости к сбоям (отказ БД, сетевые задержки)</li>
+<li>A/B тестирование: для проверки эффективности новых алгоритмов ИИ</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: высокое качество кода, быстрая обратная связь при разработке, уверенность в изменениях</li>
+<li>Отрицательные: высокие затраты на поддержку тестовой инфраструктуры, долгое выполнение полного тестового сьюта</li>
+</ul>
+<hr />
+<p>11: Выбор стратегии работы с данными и миграциями</p>
+<p>Контекст: Полиглотная архитектура БД требует согласованных миграций, seed-данных (онтология техники), бэкапов и восстановления. Данные должны соответствовать 152-ФЗ.</p>
+<p>Варианты:</p>
+<ul>
+<li>Ручные миграции</li>
+<li>Инструменты, специфичные для каждой БД</li>
+<li>Универсальный инструмент миграций</li>
+<li>Git-подход к данным</li>
+</ul>
+<p>Выбор: Liquibase для PostgreSQL + кастомные миграции для других БД + DVC для данных ИИ-моделей</p>
+<p>Обоснование:</p>
+<ul>
+<li>Liquibase: отслеживание миграций через Git, откат изменений, поддержка multiple databases</li>
+<li>Кастомные миграции для Neo4j: Cypher-скрипты под контролем версий для обновления графа знаний</li>
+<li>Elasticsearch: версионирование индексов через alias для zero-downtime реиндексации</li>
+<li>DVC (Data Version Control): контроль версий наборов данных для обучения ИИ, воспроизводимость экспериментов</li>
+<li>Ежедневные бэкапы: BorgBackup для дедупликации и шифрования резервных копий</li>
+<li>Data mesh принципы: каждый сервис отвечает за свои данные, публикует контракты через API</li>
+</ul>
+<p>Последствия:</p>
+<ul>
+<li>Положительные: воспроизводимость развертывания, возможность отката миграций, контроль версий данных</li>
+<li>Отрицательные: сложность координации миграций между разными БД, необходимость кастомных решений для нереляционных БД</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="diagrams/component.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="article.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="diagrams/component.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="article.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>
